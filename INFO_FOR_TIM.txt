@@ -1,0 +1,9 @@
+1. URL to access: http://localhost:12345/
+
+2. My GitHub: https://github.com/CyrusChan7/Docker-Individual-Assignment
+
+3. My Docker Hub: https://hub.docker.com/search?q=cyruschan7
+  
+4. Specific pushed images:
+https://hub.docker.com/r/cyruschan7/eval4640-app
+https://hub.docker.com/r/cyruschan7/eval4640-web
