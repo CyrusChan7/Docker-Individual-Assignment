@@ -5,15 +5,13 @@ services:
   app:
     build:
       dockerfile: ./app/Dockerfile
-    #image: cyruschan7/dockerized-app:latest
-    #depends_on:
-    #  - db2
+    #image: cyruschan7/eval4640-app:latest
     env_file: variables.env
 
   web:
     build:
       dockerfile: ./html/Dockerfile
-    #image: cyruschan7/dockerized-web:latest
+    #image: cyruschan7/eval4640-web:latest
     ports:
       - 12345:80
     env_file: variables.env

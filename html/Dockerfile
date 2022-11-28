@@ -10,9 +10,6 @@ COPY ./html /app/src/
 WORKDIR /app/src
 
 
-#RUN cp index.html /usr/share/nginx/html
-#COPY /web/default.conf /etc/nginx/conf.d/default.conf
-
 RUN mkdir /etc/nginx/templates
 COPY ./frontend/default.conf.template /etc/nginx/templates
 

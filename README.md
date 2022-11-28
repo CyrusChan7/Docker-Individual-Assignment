@@ -1,1 +1,5 @@
-# Docker-Individual-Assignment
+# Docker-Individual-Assignment  
+  
+URL to access:  
+  
+http://localhost:12345/

@@ -1,7 +1,5 @@
-echo "Cyrus Chan
-A01242596
+echo "${STUDENT_NAME}
+${STUDENT_ID}
 " > /app/src/student.txt
-
-echo "hello world"
 
 python3 web.py
