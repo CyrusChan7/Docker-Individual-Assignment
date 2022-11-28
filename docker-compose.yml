@@ -1,0 +1,19 @@
+version: '3.3'
+
+
+services:
+  app:
+    build:
+      dockerfile: ./app/Dockerfile
+    ports:
+      - 5000:5000
+    #image: cyruschan7/dockerized-app:latest
+    #depends_on:
+    #  - db2
+
+  web:
+    build:
+      dockerfile: ./html/Dockerfile
+    #image: cyruschan7/dockerized-web:latest
+    ports:
+      - 12345:80
