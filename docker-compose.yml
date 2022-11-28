@@ -5,11 +5,10 @@ services:
   app:
     build:
       dockerfile: ./app/Dockerfile
-    ports:
-      - 5000:5000
     #image: cyruschan7/dockerized-app:latest
     #depends_on:
     #  - db2
+    env_file: variables.env
 
   web:
     build:
@@ -17,3 +16,4 @@ services:
     #image: cyruschan7/dockerized-web:latest
     ports:
       - 12345:80
+    env_file: variables.env
