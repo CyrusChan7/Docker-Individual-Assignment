@@ -35,3 +35,4 @@ jobs:
           file: ./html/Dockerfile
           push: true
           tags: cyruschan7/eval4640-web:latest 
+          
