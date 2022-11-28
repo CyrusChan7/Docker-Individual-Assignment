@@ -1,0 +1,37 @@
+name: Docker-Individual-Assignment-Pipeline
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout the code
+        uses: actions/checkout@v3
+
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      -
+        name: Build and push app docker image
+        uses: docker/build-push-action@v3
+        with:
+          file: ./app/Dockerfile
+          push: true
+          tags: cyruschan7/eval4640-app:latest
+
+      -
+        name: Build and push web docker image
+        uses: docker/build-push-action@v3
+        with:
+          file: ./html/Dockerfile
+          push: true
+          tags: cyruschan7/eval4640-web:latest 
